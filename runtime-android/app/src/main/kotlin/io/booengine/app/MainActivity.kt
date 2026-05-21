@@ -12,6 +12,7 @@ import io.booengine.bridge.BridgeManager
 class MainActivity : ComponentActivity() {
     private lateinit var webView: WebView
     private lateinit var loadingOverlay: View
+    private val bridgeManager = BridgeManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         loadingOverlay = findViewById(R.id.loading_overlay)
 
         configureWebView(webView)
-        webView.addJavascriptInterface(BridgeManager(), "booBridge")
+        webView.addJavascriptInterface(bridgeManager, "booBridge")
 
         if (savedInstanceState == null) {
             webView.loadUrl(resolveStartUrl())
