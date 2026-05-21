@@ -1,0 +1,11 @@
+plugins {
+    id 'base'
+}
+
+tasks.register('test') {
+    group = 'verification'
+    description = 'Placeholder test task until Gradle Android project is fully scaffolded.'
+    doLast {
+        println 'No automated Gradle tests are configured yet; placeholder task passed.'
+    }
+}

@@ -1,16 +1,13 @@
 package io.booengine.app
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.TextView
 import androidx.activity.ComponentActivity
-import org.json.JSONObject
+import io.booengine.bridge.BridgeManager
 
 class MainActivity : ComponentActivity() {
     private lateinit var webView: WebView
@@ -24,7 +21,7 @@ class MainActivity : ComponentActivity() {
         loadingOverlay = findViewById(R.id.loading_overlay)
 
         configureWebView(webView)
-        webView.addJavascriptInterface(BooBridge(), "booBridge")
+        webView.addJavascriptInterface(BridgeManager(), "booBridge")
 
         if (savedInstanceState == null) {
             webView.loadUrl(resolveStartUrl())
@@ -72,34 +69,7 @@ class MainActivity : ComponentActivity() {
         return if (devUrl.startsWith("http://") || devUrl.startsWith("https://")) devUrl else LOCAL_ASSET_URL
     }
 
-    private inner class BooBridge {
-        @JavascriptInterface
-        fun call(requestJson: String): String {
-            val start = System.currentTimeMillis()
-            return try {
-                val body = JSONObject(requestJson)
-                val namespace = body.optString("namespace")
-                val method = body.optString("method")
-                val requestId = body.optString("requestId", "")
-                val outcome = JSONObject()
-                    .put("ok", true)
-                    .put("data", JSONObject().put("ack", true))
-                    .put("requestId", requestId)
-                Log.i(TAG, "requestId=$requestId namespace=$namespace method=$method duration=${System.currentTimeMillis()-start} outcome=ok")
-                outcome.toString()
-            } catch (err: Exception) {
-                JSONObject()
-                    .put("ok", false)
-                    .put("error", JSONObject()
-                        .put("code", "VALIDATION_ERROR")
-                        .put("message", "Invalid bridge payload"))
-                    .toString()
-            }
-        }
-    }
-
     companion object {
-        private const val TAG = "BooMainActivity"
         private const val LOCAL_ASSET_URL = "file:///android_asset/index.html"
         private const val EXTRA_DEV_URL = "boo.devUrl"
     }
