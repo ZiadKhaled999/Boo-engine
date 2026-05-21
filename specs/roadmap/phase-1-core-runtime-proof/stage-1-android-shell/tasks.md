@@ -71,11 +71,11 @@ export interface BooBridge {
 3. `Create Android project permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -154,11 +154,11 @@ export interface BooBridge {
 3. `Set up app lifecycle permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -237,11 +237,11 @@ export interface BooBridge {
 3. `Add WebView container permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -320,11 +320,11 @@ export interface BooBridge {
 3. `Load local bundled app permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -403,11 +403,11 @@ export interface BooBridge {
 3. `Support remote dev URL permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -486,11 +486,11 @@ export interface BooBridge {
 3. `Add splash/loading state permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
@@ -569,11 +569,11 @@ export interface BooBridge {
 3. `Handle app resume/pause/close permission denied` — remove permission or deny OS prompt; expect `PERMISSION_DENIED`.
 
 **Acceptance criteria**
-- [ ] Part compiles in affected modules.
-- [ ] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
-- [ ] Validation and permission gates run before side-effects.
-- [ ] Structured errors returned for all documented failures.
-- [ ] Tests for success/validation/permission are documented and pass.
+- [x] Part compiles in affected modules.
+- [x] Behavior reachable via bridge call (`boo.[namespace].[method]()`).
+- [x] Validation and permission gates run before side-effects.
+- [x] Structured errors returned for all documented failures.
+- [x] Tests for success/validation/permission are documented and pass.
 
 **Related specs**
 - `specs/architecture/system-overview.md`
