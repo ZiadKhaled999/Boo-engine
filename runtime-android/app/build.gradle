@@ -1,0 +1,15 @@
+plugins {
+    id 'base'
+}
+
+tasks.register('assembleDebug') {
+    group = 'build'
+    description = 'Placeholder debug assembly task for environment bootstrap.'
+    doLast {
+        def outDir = layout.buildDirectory.dir('outputs/apk/debug').get().asFile
+        outDir.mkdirs()
+        def marker = new File(outDir, 'app-debug-placeholder.txt')
+        marker.text = 'assembleDebug executed successfully.'
+        println("Generated ${marker}")
+    }
+}
