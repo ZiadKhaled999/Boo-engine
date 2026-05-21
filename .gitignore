@@ -1,0 +1,6 @@
+# Gradle local state
+.gradle/
+
+# Build outputs
+build/
+**/build/
