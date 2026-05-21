@@ -1,15 +1,46 @@
 plugins {
-    id 'base'
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
-tasks.register('assembleDebug') {
-    group = 'build'
-    description = 'Placeholder debug assembly task for environment bootstrap.'
-    doLast {
-        def outDir = layout.buildDirectory.dir('outputs/apk/debug').get().asFile
-        outDir.mkdirs()
-        def marker = new File(outDir, 'app-debug-placeholder.txt')
-        marker.text = 'assembleDebug executed successfully.'
-        println("Generated ${marker}")
+android {
+    namespace 'io.booengine.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'io.booengine.app'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '0.1.0'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                jvmArgs '-Djdk.attach.allowAttachSelf=true'
+            }
+        }
+    }
+}
+
+dependencies {
+    // Core Android
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+
+    // Unit tests
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.11.1'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit:1.9.22'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:5.2.1'
 }
