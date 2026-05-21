@@ -1,0 +1,9 @@
+{
+  "appId": "io.booengine.demo",
+  "appName": "Boo Demo",
+  "startUrl": "file:///android_asset/index.html",
+  "permissions": ["app:read:metadata", "app:read:permissions"],
+  "plugins": {
+    "app": true
+  }
+}
